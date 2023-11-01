@@ -1,13 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using TicTacToe;
 
-static class Program
+internal static class Program
 {
     [STAThread]
-    static void Main(string[] args)
+    private static void Main()
     {
-        using (Game g = new Game())
+        using (var g = new TicTacToeGame())
         {
-            new GraphicsDeviceManager(g);
             g.Run();
         }
     }
